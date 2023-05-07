@@ -46,8 +46,14 @@ const STATIC_DATA = [
     },
 ];
 
+import { getServerSession } from "next-auth";
 import { NextResponse } from "next/server";
 
-export function GET() {
-    return NextResponse.json(STATIC_DATA);
+export async function GET() {
+    const session = await getServerSession();
+
+    return NextResponse.json({
+        session,
+        data: STATIC_DATA,
+    });
 }

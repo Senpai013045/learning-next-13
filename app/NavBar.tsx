@@ -1,3 +1,4 @@
+import { SignInButton, SignOutButton } from "@/components/AuthButtons";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -36,6 +37,9 @@ export default function NavBar() {
             </Link>
           </li>
         ))}
+        <li>
+          <SignInButton />
+        </li>
       </ul>
     </nav>
   );
