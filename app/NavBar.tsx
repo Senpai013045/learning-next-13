@@ -19,7 +19,7 @@ const NAVIGATION = [
 
 export default function NavBar() {
   return (
-    <nav className="flex items-center justify-between shadow-md p-4">
+    <nav className="flex gap-4 items-center justify-between shadow-md p-4 flex-wrap">
       <Link href="/">
         <Image
           src="/next.svg"
@@ -29,7 +29,7 @@ export default function NavBar() {
           className="w-40 h-auto"
         />
       </Link>
-      <ul className="flex items-center gap-x-4">
+      <ul className="flex items-center gap-4 flex-wrap">
         {NAVIGATION.map(({ name, href }) => (
           <li key={href}>
             <Link href={href}>

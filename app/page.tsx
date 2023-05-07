@@ -1,5 +1,5 @@
-import { getServerSession } from "next-auth";
 import { redirect } from "next/navigation";
+import { getServerSession } from "@/lib/next-auth";
 
 export default async function Home() {
   const session = await getServerSession();
